@@ -1,0 +1,208 @@
+@charset "UTF-8";
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root{
+        --font-texto: 'Quicksand', sans-serif;
+}
+
+.cor-de-fundo{
+    background:radial-gradient(circle, rgb(226, 66, 66) 20%, black);
+}
+
+.aumentar-texto{
+    font-size: 3em;
+}
+
+.editando{
+    width: 1200px;
+    height: 600px;
+}
+
+.estilo-texto{
+    font-family: var(--font-texto);
+}
+
+.linha-branca-em-volta{
+    -webkit-text-stroke: 0.4px white;
+}
+
+.linha-preta-em-volta{
+    -webkit-text-stroke: 2px rgb(255, 153, 20);
+}
+
+.altura-imagem{
+    width: 190px;
+}
+
+.fundo{
+    background-attachment: fixed;
+}
+
+/* Início da Animação dos Links */
+.linha-horizontal {
+    text-decoration: none;
+}
+
+.linha-horizontal::after {
+    content: "";
+    display: block;
+    width: 0px;
+    height: 1.6px;
+    background: linear-gradient(to left, red, black) no-repeat;
+    transition: 0.5s ease-out;
+}
+
+.linha-horizontal:hover::after {
+    width: 50%;
+}
+
+/* Fim da Animação dos Links */
+
+.tamanho-letra{
+    font-size: 1.3em;
+}
+
+.cor-escura{
+    -webkit-text-stroke: 1.2px black;
+}
+
+.bg-escuro{
+    background-color: black;
+}
+
+/*Rodapé*/
+footer {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    background: black;
+    color: white;
+    text-align: center;
+    margin-top: 4em;
+}
+footer p{
+    text-align: center;
+}
+#github{
+    width: 47px;
+}
+
+.flex5 {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+/* Editando tamanho dos itens */
+.navbar a {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.carousel-item {
+    min-height: 400px;
+}
+
+.carousel-caption {
+    bottom: 220px;
+    z-index: 2;
+}
+
+.carousel-caption h5 {
+    font-size: 60px;
+    font-weight: 600;
+    margin-top: 25px;
+
+}
+
+.carousel-caption p {
+    width: 60%;
+    margin: 10px auto;
+    font-size: 18px;
+}
+
+.carousel-inner::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.services {
+    padding: 40px 0;
+}
+
+.bg-car1 {
+    background-image: linear-gradient(rgba(208, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)), url(imagens/academia-3.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-car2 {
+    background-image: linear-gradient(rgba(208, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)), url(imagens/PesosAcademia.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-car3 {
+    background-image: linear-gradient(rgba(208, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)), url(imagens/Esteira.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.product {
+    padding: 80px 0;
+}
+
+/*
+.card img {
+    
+}
+*/
+
+
+@media (max-width:767px) {
+    .carousel-item {
+        min-height: 500px;
+    }
+
+    .carousel-item img {
+        height: 500px;
+    }
+
+    .carousel-caption {
+        bottom: 30px;
+    }
+
+    .carousel-caption h5 {
+        font-size: 50px;
+        margin-top: 0;
+    }
+
+    .carousel-caption p {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .services {
+        padding: 30px 0;
+    }
+
+    .product {
+        padding: 30px 0 0 0;
+    }
+}
+
